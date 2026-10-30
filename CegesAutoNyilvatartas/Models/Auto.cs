@@ -14,11 +14,18 @@ namespace CegesAutoNyilvatartas.Models
         public string Modell { get; set; } = string.Empty;
 
         public string Rendszám { get; set; } = string.Empty;
-        [Range(1950,2026)]
+        [Range(1950, 2026)]
         public int Evjarat { get; set; }
 
         public int? PeopleId { get; set; }
 
         public People? People { get; set; }
+
+        public override string? ToString()
+        {
+            return $"{Marka} - {Modell} - {Rendszám} - {Evjarat}";
+        }
     }
+
+
 }
